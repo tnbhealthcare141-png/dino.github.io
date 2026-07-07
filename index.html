@@ -3,191 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Life Journey</title>
+<title>TNB Healthcare Assistance</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-AI-Call-Abandonment/
-│
-├── index.html
-├── style.css
-├── script.js
-├── images/
-│
-└── README.md
 body{
-    background:#f5f7fa;
+    background:#f4f7f9;
     color:#333;
 }
 
-/* Header */
-
 header{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:#007a3d;
+    color:white;
+    padding:20px;
+}
+
+header h1{
     text-align:center;
-    color:white;
 }
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
-}
-
-.hero a{
-    text-decoration:none;
-    background:#00b894;
-    color:white;
-    padding:15px 35px;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.4s;
-}
-
-.hero a:hover{
-    background:#019875;
-}
-
-/* Navigation */
 
 nav{
-    background:#222;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-}
-
-nav li{
-    margin:15px;
+    margin-top:15px;
+    text-align:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    margin:0 15px;
     font-weight:bold;
 }
 
-nav a:hover{
-    color:#00cec9;
+.hero{
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
 }
 
-/* Sections */
+.hero h2{
+    font-size:42px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#ffcc00;
+    color:black;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
 
 section{
-    padding:70px 10%;
+    padding:60px 10%;
 }
 
-section h2{
+.section-title{
     text-align:center;
-    color:#00b894;
     margin-bottom:40px;
-    font-size:36px;
+    color:#007a3d;
 }
-
-/* About */
-
-.about{
-    display:flex;
-    flex-wrap:wrap;
-    gap:40px;
-    align-items:center;
-}
-
-.about img{
-    width:320px;
-    border-radius:15px;
-}
-
-.about-text{
-    flex:1;
-}
-
-.about-text p{
-    font-size:18px;
-    line-height:1.8;
-}
-
-/* Timeline */
-
-.timeline{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline::after{
-    content:"";
-    position:absolute;
-    width:5px;
-    background:#00b894;
-    top:0;
-    bottom:0;
-    left:50%;
-}
-
-.container{
-    width:50%;
-    padding:20px 40px;
-    position:relative;
-}
-
-.left{
-    left:0;
-}
-
-.right{
-    left:50%;
-}
-
-.content{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.container::before{
-    content:"";
-    position:absolute;
-    width:20px;
-    height:20px;
-    background:#00b894;
-    border-radius:50%;
-    top:30px;
-    right:-12px;
-}
-
-.right::before{
-    left:-8px;
-}
-
-/* Cards */
 
 .cards{
     display:grid;
@@ -198,58 +92,46 @@ section h2{
 .card{
     background:white;
     padding:25px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 12px rgba(0,0,0,.1);
-    transition:.3s;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.card h3{
+    color:#007a3d;
+    margin-bottom:15px;
 }
 
-/* Gallery */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+form{
+    background:white;
+    max-width:700px;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
-.gallery img{
+input, textarea, select{
     width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-}
-
-/* Contact */
-
-.contact{
-    text-align:center;
+    padding:12px;
+    margin-top:8px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
 button{
-    padding:15px 30px;
-    background:#00b894;
-    border:none;
+    background:#007a3d;
     color:white;
-    font-size:18px;
-    border-radius:30px;
+    border:none;
+    padding:12px 20px;
     cursor:pointer;
+    border-radius:5px;
+    font-size:16px;
 }
 
 button:hover{
-    background:#019875;
+    background:#005b2f;
 }
-
-#message{
-    margin-top:20px;
-    font-size:20px;
-    color:#00b894;
-}
-
-/* Footer */
 
 footer{
     background:#222;
@@ -258,217 +140,157 @@ footer{
     padding:20px;
 }
 
-@media(max-width:768px){
-
-.hero h1{
-    font-size:40px;
-}
-
-.about{
+.success{
+    color:green;
     text-align:center;
-    justify-content:center;
-}
-
-.timeline::after{
-    left:25px;
-}
-
-.container{
-    width:100%;
-    left:0;
-    padding-left:70px;
-    padding-right:20px;
-}
-
-.right{
-    left:0;
-}
-
-.container::before{
-    left:15px;
-}
+    font-weight:bold;
+    margin-top:20px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
-
-<div class="hero">
-<h1>My Life Journey</h1>
-<p>Every moment tells a story. Every step builds my future.</p>
-
-<a href="#about">Explore My Journey</a>
-
-</div>
-
-</header>
+<h1>TNB Healthcare Assistance</h1>
 
 <nav>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#journey">Journey</a></li>
-<li><a href="#achievements">Achievements</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#apply">Apply</a>
+<a href="#contact">Contact</a>
 </nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h2>Supporting Employee Health & Wellbeing</h2>
+<p>Healthcare assistance information and application portal.</p>
+
+<a href="#apply" class="btn">Apply Now</a>
+
+</div>
+</section>
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2 class="section-title">About Healthcare Assistance</h2>
 
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43a?auto=format&fit=crop&w=600&q=80">
-
-<div class="about-text">
-
-<p>
-
-Welcome to my personal website! This page shares my life journey—from childhood dreams to my present achievements and future goals. Every experience has shaped who I am today, teaching me valuable lessons and inspiring me to keep growing.
-
+<p style="text-align:center;">
+The Healthcare Assistance Portal provides information on available
+medical support, healthcare benefits, and assistance services for eligible employees.
+Applications can be submitted online for review.
 </p>
 
-</div>
-
-</div>
-
 </section>
 
-<section id="journey">
+<section id="services">
 
-<h2>My Journey</h2>
-
-<div class="timeline">
-
-<div class="container left">
-<div class="content">
-<h3>👶 Childhood</h3>
-<p>A joyful beginning filled with curiosity and imagination.</p>
-</div>
-</div>
-
-<div class="container right">
-<div class="content">
-<h3>🎓 Education</h3>
-<p>Learning, growing, and discovering new passions.</p>
-</div>
-</div>
-
-<div class="container left">
-<div class="content">
-<h3>💼 Career</h3>
-<p>Building skills, overcoming challenges, and achieving success.</p>
-</div>
-</div>
-
-<div class="container right">
-<div class="content">
-<h3>🚀 Future</h3>
-<p>Dreaming bigger and working hard to achieve meaningful goals.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="achievements">
-
-<h2>Achievements</h2>
+<h2 class="section-title">Our Services</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>🏆 Academic Excellence</h3>
-<p>Completed important educational milestones with dedication.</p>
+<h3>Medical Assistance</h3>
+<p>Support for approved medical treatment and healthcare expenses.</p>
 </div>
 
 <div class="card">
-<h3>💻 Technical Skills</h3>
-<p>Developed programming and problem-solving skills.</p>
+<h3>Hospital Benefits</h3>
+<p>Information regarding hospital admission support and claims.</p>
 </div>
 
 <div class="card">
-<h3>🌍 Personal Growth</h3>
-<p>Learned valuable life lessons through experiences.</p>
+<h3>Emergency Support</h3>
+<p>Emergency healthcare guidance and assistance.</p>
+</div>
+
+<div class="card">
+<h3>Health Consultation</h3>
+<p>Access to healthcare consultation and wellness programmes.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="gallery">
+<section id="apply">
 
-<h2>Memories Gallery</h2>
+<h2 class="section-title">Healthcare Assistance Application</h2>
 
-<div class="gallery">
+<form id="applicationForm">
 
-<img src="https://picsum.photos/400/300?1">
+<label>Full Name</label>
+<input type="text" required>
 
-<img src="https://picsum.photos/400/300?2">
+<label>Employee ID</label>
+<input type="text" required>
 
-<img src="https://picsum.photos/400/300?3">
+<label>Email</label>
+<input type="email" required>
 
-<img src="https://picsum.photos/400/300?4">
+<label>Phone Number</label>
+<input type="tel" required>
 
-</div>
+<label>Type of Assistance</label>
+
+<select required>
+<option value="">Select</option>
+<option>Medical Assistance</option>
+<option>Hospital Assistance</option>
+<option>Emergency Support</option>
+<option>Health Consultation</option>
+</select>
+
+<label>Description</label>
+
+<textarea rows="5" required></textarea>
+
+<button type="submit">Submit Application</button>
+
+<div id="message" class="success"></div>
+
+</form>
 
 </section>
 
 <section id="contact">
 
-<h2>Life Motto</h2>
+<h2 class="section-title">Contact Us</h2>
 
-<div class="contact">
+<p style="text-align:center;">
+📍 TNB Healthcare Assistance Unit<br><br>
 
-<p><strong>"Success is not a destination; it is a journey of continuous learning."</strong></p>
+📞 +60 3-1234 5678<br><br>
 
-<br>
-
-<button onclick="motivate()">Click for Motivation</button>
-
-<p id="message"></p>
-
-</div>
+✉ healthcare@tnb.com.my
+</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 My Life Journey | Designed with ❤️</p>
+<p>
+© 2026 TNB Healthcare Assistance Portal. All Rights Reserved.
+</p>
 
 </footer>
 
 <script>
 
-function motivate(){
+document.getElementById("applicationForm").addEventListener("submit", function(e){
 
-const quotes=[
+e.preventDefault();
 
-"Believe in yourself!",
+document.getElementById("message").innerHTML =
+"✔ Your application has been submitted successfully.";
 
-"Dream big and work hard.",
+this.reset();
 
-"Every day is a new opportunity.",
-
-"Small steps lead to great success.",
-
-"Your journey makes you stronger."
-
-];
-
-let random=Math.floor(Math.random()*quotes.length);
-
-document.getElementById("message").innerHTML=quotes[random];
-
-}
+});
 
 </script>
-<elevenlabs-convai agent-id="agent_2501kwbqaca0f1tardny8aeghmtp"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<elevenlabs-convai agent-id="agent_5801kwvwmv52f298ssnc8phrtns2"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
